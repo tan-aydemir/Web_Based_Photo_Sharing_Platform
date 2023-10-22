@@ -1,0 +1,26 @@
+<head>
+    <title>Search Users</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Search Users</h1>
+    </div>
+    <form action="/searchusers" method="post">
+        <input type="text" name="search" placeholder="Search Users">
+        <input type="submit" value="Search">
+    </form>
+    <ul>
+        {% for user in users %}
+        <li><a href='/viewfriends/{{user}}'>{{user}}</a></li>
+        <!--if user registered show message-->
+        {% if user in registered_users %}
+        <p>This user is registered add them as your friend:</p>
+        <!--add user as friend link-->
+        <a href='/addfriend/{{user}}'>Add Friend</a>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    <!--search another user-->
+    <a href='/searchusers'>Search another user</a>
+</body>
+<a href='/'>Home</a>

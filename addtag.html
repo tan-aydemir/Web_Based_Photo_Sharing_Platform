@@ -1,0 +1,16 @@
+<head>
+    <title>Create a Tag</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Create a tag</h1>
+    </div>
+        <form method="post" action="/addtag/{{photo_id}}" enctype="multipart/form-data">
+            <label for="tag_name">Please enter tag name:</label>
+            <input type="text" name="tag_name" required='true' /><br />
+            <input type="submit" value="Add Tag" />
+        </form>
+
+    </body>
+    <a href='/'>Home</a>
+       

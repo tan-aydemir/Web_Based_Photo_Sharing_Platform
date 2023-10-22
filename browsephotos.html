@@ -1,0 +1,14 @@
+<head>
+    <title>Browse all Photos!</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Browse all Photos!</h1>
+    </div>
+    <ul>
+        {% for photo in photos %}
+        <li>{{photo[1]}},{{photo[2]}}<br>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}'/></li>
+        {% endfor %}
+    </ul>
+<a href='/'>Home</a>

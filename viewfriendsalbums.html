@@ -1,0 +1,16 @@
+<head>
+    <title>View your Friends Albums!</title>
+</head>
+<body>
+    <div class="title">
+        <h1>View your Friends Albums!</h1>
+    </div>
+    <ul>
+        {% for album in albums %}
+        <!--header with message-->
+        <h2><li>{{album[2]}}'s album:</li></h2>
+        <li><a href='/viewfriendsalbumsphotos/{{album[1]}}'>{{album[0]}}</a></li>
+        
+        {% endfor %}
+    </ul>
+<a href='/'>Home</a>

@@ -1,0 +1,46 @@
+<head>
+    <title>Here are your photos!</title>
+</head>
+    
+    
+    <body>
+        {% if message %}
+            <h4>{{message}}!</h4>
+        {% endif %}
+    
+    
+        {% if albums %}
+            <h2>Albums</h2>
+                <ul>
+                {% for album in albums %}
+                <a href = '/viewalbumphotos/{{album[1]}}'>{{album[0]}}</a><br />
+                {% endfor %}
+                </ul>
+        {% endif %}
+    
+    
+        {% if photos %}
+            <h2>Photos</h2>
+                <ul>
+                {% for photo in photos %}
+                    <li>{{photo[1]}}<br>
+                    <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}'/></li>
+                    <!--link to delete photo-->
+                    <a href = '/deletephoto/{{photo[2]}}'>Delete Photo</a><br />
+                    <!--link to add tag-->
+                    <a href = '/addtag/{{photo[2]}}'>Add Tag</a><br />
+                    <!--link to add comment-->
+                    <a href = '/addcomment/{{photo[2]}}'>Comment</a><br />
+                    <!--link to numberoflikes-->
+                    <a href = '/numberoflikes/{{photo[2]}}'>Number of Likes</a><br />
+                    <!--llink to add comment-->
+                    <a href = '/like/{{photo[2]}}'>Like</a><br />
+                {% endfor %}
+                </ul>
+        {% endif %}
+
+        <a href = '/uploadtoalbum/{{album_id}}'>Upload to Album</a><br />
+        <a href = '/deletealbum/{{album_id}}'>Delete Album</a><br />
+
+    </body>
+<a href='/'>Home</a>

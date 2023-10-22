@@ -1,0 +1,34 @@
+<head>
+    <title>Here are your friends photos!</title>
+</head>
+    
+    
+    <body>
+        {% if message %}
+            <h4>{{message}}!</h4>
+        {% endif %}
+    
+    
+        {% if albums %}
+            <h2>Albums</h2>
+                <ul>
+                {% for album in albums %}
+                <a href = '/viewfriendsalbumsphotos/{{album[1]}}'>{{album[0]}}</a><br />
+                {% endfor %}
+                </ul>
+        {% endif %}
+    
+    
+    
+    
+        {% if photos %}
+            <h2>Photos</h2>
+                <ul>
+                {% for photo in photos %}
+                    <li>{{photo[1]}}<br>
+                    <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}'/></li>
+                {% endfor %}
+                </ul>
+        {% endif %}
+    </body>
+<a href='/'>Home</a>

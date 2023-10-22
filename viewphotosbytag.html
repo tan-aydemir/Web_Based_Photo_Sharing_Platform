@@ -1,0 +1,24 @@
+<head>
+    <title>View Photos with same Tag!</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Specify the tag name!</h1>
+    </div>
+    <form action="/viewphotosbytag" method="post">
+        <label for="tag_name">Please enter tag name:</label>
+        <input type="text" name="tag_name" required='true' /><br />
+        <input type="submit" value="Show">
+    </form>
+
+    {% if photos %}
+    <h2>Here are the photos with that tag</h2>
+    <ul>
+    {% for photo in photos %}
+        <li>{{photo[2]}}<br>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}'/></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+<a href='/'>Home</a>

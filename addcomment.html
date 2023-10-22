@@ -1,0 +1,17 @@
+<head>
+    <title>Comment</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Add a comment</h1>
+    </div>
+        <form method="post" action="/addcomment/{{photo_id}}" enctype="multipart/form-data">
+            <label for="comment">Please comment:</label>
+            <input type="text" name="comment" required='true' /><br />
+            <label for="date">Please add date of comment:</label>
+            <input type="date" name="date" required='true' /><br />
+            <input type="submit" value="Comment" />
+        </form>
+
+    </body>
+    <a href='/'>Home</a>

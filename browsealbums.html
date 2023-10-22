@@ -1,0 +1,13 @@
+<head>
+    <title>Browse Albums!</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Browse Albums!</h1>
+    </div>
+    <ul>
+        {% for album in albums %}
+        <li>{{album[1]}}, <a href='/viewalbumphotos/{{album[2]}}'>{{album[0]}}</a></li>
+        {% endfor %}
+    </ul>
+<a href='/'>Home</a>

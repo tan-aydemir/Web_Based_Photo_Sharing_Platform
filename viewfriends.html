@@ -1,0 +1,13 @@
+<head>
+    <title>View your Friends!</title>
+</head>
+<body>
+    <div class="title">
+        <h1>View your Friends!</h1>
+    </div>
+    <ul>
+        {% for friend in friends %}
+        <li>{{friend}}</li>
+        {% endfor %}
+    </ul>
+<a href='/'>Home</a>

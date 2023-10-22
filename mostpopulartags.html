@@ -1,0 +1,13 @@
+<head>
+    <title>Most popular tags!</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Most popular tags!</h1>
+    </div>
+    <ul>
+        {% for tag in tags %}
+        <li>{{tag}}</li>
+        {% endfor %}
+    </ul>
+<a href='/'>Home</a>
