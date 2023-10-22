@@ -10,7 +10,6 @@
 - [Project Structure](#project-structure)
 - [Customizing](#customizing)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -24,7 +23,6 @@ PhotoShare is a web application that allows users to share photos, manage albums
 - Adding friends to your network.
 - Tagging photos with keywords.
 - Liking and commenting on photos.
-- Viewing popular tags and photos by tags.
 
 ## Prerequisites
 
@@ -88,30 +86,22 @@ Before you begin, ensure you have met the following requirements:
 
 - **Commenting and Liking**: You can comment on photos and like them.
 
-- **Viewing Popular Tags**: Check out the most popular tags.
-
 - **Viewing Friends' Photos**: View photos uploaded by your friends.
 
 ## Project Structure
 
 - **app.py**: The main application file containing the Flask application code.
 
-- **templates**: This directory contains HTML templates for the web pages.
-
-- **static**: Static files like CSS, JavaScript, and images are stored here.
+- **html_files**: This directory contains HTML templates for the web pages.
 
 ## Customizing
 
-You can customize the application by modifying the HTML templates and stylesheets in the `templates` and `static` directories. You can also extend the functionality by editing the `app.py` file.
+You can customize the application by modifying the HTML templates and stylesheets in the `html_files' directories. You can also extend the functionality by editing the `app.py` file.
 
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to the project, feel free to submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
-Feel free to modify this README file to suit your specific project's needs. Provide detailed instructions for installation, usage, and any customizations. Additionally, include information about the project's license and how others can contribute to it.
+Feel free to modify this README file to suit your specific project's needs.
